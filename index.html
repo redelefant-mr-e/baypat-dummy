@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BayPAT Wireframe Library</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <section class="hero-banner">
+        <div>
+          <span class="eyebrow">HTML-first system</span>
+          <h1>Reusable monochrome wireframes for BayPAT page drafts</h1>
+          <p class="lede">
+            This library translates structured content drafts into polished,
+            client-facing desktop and mobile wireframes. It is built around the
+            BayPAT sitemap, navigation, reusable blocks, and CTA logic.
+          </p>
+          <div class="button-row">
+            <a class="button" href="./pages/home.html">Open click dummy homepage</a>
+            <a class="button-secondary" href="./pages/services-industry.html">Open first example page</a>
+          </div>
+        </div>
+        <aside class="hero-notes stack-md">
+          <div>
+            <div class="mono-heading">System inputs</div>
+            <div class="label-row">
+              <span class="label">Sitemap wireframe</span>
+              <span class="label">Navigation</span>
+              <span class="label">Page-source mapping</span>
+              <span class="label">Content-output template</span>
+            </div>
+          </div>
+          <div>
+            <div class="mono-heading">Current page coverage</div>
+            <p class="small-copy">
+              The click dummy now includes drafted pages, scaffold pages for missing
+              sitemap areas, and a fully linked site shell. The first fully implemented
+              review example is <strong>Services for Industry</strong>.
+            </p>
+          </div>
+          <div class="muted-box">
+            <strong>Presentation mode</strong>
+            <p class="small-copy">
+              High-fidelity wireframe styling, black and white only, with explicit
+              labels for headings, metadata, image placeholders, links, and CTAs.
+            </p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="components" class="stack-lg">
+        <div class="section-title">
+          <div>
+            <span class="section-kicker">Library</span>
+            <h2>Reusable Components</h2>
+          </div>
+          <p class="small-copy">
+            Shared wireframe patterns for navigation, hero blocks, content cards,
+            CTA bands, FAQ modules, and placeholder media treatment.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="component-card stack-md">
+            <div class="label-row">
+              <span class="label">Global chrome</span>
+              <span class="label">Desktop + mobile</span>
+            </div>
+            <h3>Primary navigation</h3>
+            <div class="nav-block">
+              <div class="primary-nav">
+                <strong>BayPAT</strong>
+                <div class="nav-links">
+                  <a class="is-active" href="#">Home</a>
+                  <a href="#">Services</a>
+                  <a href="#">Technology Offers</a>
+                  <a href="#">Support</a>
+                  <a href="#">About BayPAT</a>
+                  <a href="#">Contact</a>
+                </div>
+              </div>
+              <div class="subnav">
+                <span class="chip">For Inventors</span>
+                <span class="chip">For Universities</span>
+                <span class="chip">Industry</span>
+                <span class="chip">Founders &amp; Start-ups</span>
+              </div>
+              <div class="breadcrumb">
+                <a href="#">Home</a>
+                <span>/</span>
+                <a href="#">Services</a>
+                <span>/</span>
+                <span>For Inventors</span>
+              </div>
+            </div>
+            <p class="small-copy">
+              Uses the new navigation structure and includes space for first-level
+              submenu chips plus breadcrumbs.
+            </p>
+          </article>
+
+          <article class="component-card stack-md">
+            <div class="label-row">
+              <span class="label">Global chrome</span>
+              <span class="label">Footer + legal</span>
+            </div>
+            <h3>Footer and legal cluster</h3>
+            <div class="footer-block">
+              <div class="section-block stack-sm">
+                <strong>BayPAT footer</strong>
+                <p class="small-copy">
+                  Company summary, primary routes, and one conversion slot.
+                </p>
+                <div class="footer-links">
+                  <a href="#">Services</a>
+                  <a href="#">Technology Offers</a>
+                  <a href="#">Support</a>
+                  <a href="#">About BayPAT</a>
+                  <a href="#">Contact</a>
+                </div>
+              </div>
+              <div class="section-block stack-sm">
+                <strong>Optional newsletter / update slot</strong>
+                <p class="small-copy">
+                  Provisional module. Use only if the content strategy confirms it.
+                </p>
+                <a class="button-secondary" href="#">Newsletter sign-up placeholder</a>
+                <div class="legal-links">
+                  <a href="#">Legal Notes</a>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Cookie Policy</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid-3">
+          <article class="component-card stack-md">
+            <div class="label-row">
+              <span class="label">Hero</span>
+              <span class="label">H1</span>
+            </div>
+            <h3>Hero / header block</h3>
+            <div class="hero-section">
+              <div>
+                <span class="eyebrow">For Inventors</span>
+                <h2>Turning inventions into real-world application</h2>
+                <p class="supporting-copy">
+                  Supporting copy, metadata tags, and primary CTA live here.
+                </p>
+                <div class="button-row">
+                  <a class="button" href="#">Primary CTA</a>
+                  <a class="button-secondary" href="#">Secondary CTA</a>
+                </div>
+              </div>
+              <div class="placeholder">
+                <div>
+                  <strong>Hero image</strong>
+                  Photo, illustration, or abstract editorial placeholder
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="component-card stack-md">
+            <div class="label-row">
+              <span class="label">Routing</span>
+              <span class="label">H2 + cards</span>
+            </div>
+            <h3>Audience or category grid</h3>
+            <div class="card-grid">
+              <div class="mini-card">
+                <span class="label">H3</span>
+                <h3>For invention advisors</h3>
+                <p class="small-copy">Short supporting copy and one CTA.</p>
+              </div>
+              <div class="mini-card">
+                <span class="label">H3</span>
+                <h3>For inventors</h3>
+                <p class="small-copy">Short supporting copy and one CTA.</p>
+              </div>
+              <div class="mini-card">
+                <span class="label">H3</span>
+                <h3>For founders</h3>
+                <p class="small-copy">Short supporting copy and one CTA.</p>
+              </div>
+              <div class="mini-card">
+                <span class="label">H3</span>
+                <h3>For industry</h3>
+                <p class="small-copy">Short supporting copy and one CTA.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="component-card stack-md">
+            <div class="label-row">
+              <span class="label">Long-form</span>
+              <span class="label">Process</span>
+            </div>
+            <h3>Process or structured content list</h3>
+            <div class="process-list">
+              <div class="process-step">
+                <div class="step-number">01</div>
+                <div>
+                  <h3>H3: Report the invention</h3>
+                  <p class="small-copy">Step summary and context for the process.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-number">02</div>
+                <div>
+                  <h3>H3: Evaluation</h3>
+                  <p class="small-copy">Patentability, market relevance, and fit.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-number">03</div>
+                <div>
+                  <h3>H3: Commercialization</h3>
+                  <p class="small-copy">Partner search, licensing, or spin-out route.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid-3">
+          <article class="component-card stack-md">
+            <div class="label-row">
+              <span class="label">CTA family</span>
+              <span class="label">Reusable</span>
+            </div>
+            <h3>CTA band</h3>
+            <div class="section-block stack-sm">
+              <span class="eyebrow">Reusable CTA</span>
+              <h2>Want to understand the patenting route in more detail?</h2>
+              <p class="small-copy">
+                Supports contact, patent process, Erfindungscheck, or job application variants.
+              </p>
+              <div class="button-row">
+                <a class="button" href="#">Primary CTA</a>
+                <a class="button-secondary" href="#">Supporting link</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="component-card stack-md">
+            <div class="label-row">
+              <span class="label">FAQ</span>
+              <span class="label">Accordion</span>
+            </div>
+            <h3>FAQ block</h3>
+            <div class="faq-list">
+              <div class="faq-item">
+                <h3>H3: What should I do before publishing?</h3>
+                <p class="small-copy">Open-state answer content for review.</p>
+              </div>
+              <div class="faq-item">
+                <h3>H3: What happens after disclosure?</h3>
+                <p class="small-copy">Second answer in open or closed state.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="component-card stack-md">
+            <div class="label-row">
+              <span class="label">Media</span>
+              <span class="label">Placeholder</span>
+            </div>
+            <h3>Image and logo placeholders</h3>
+            <div class="grid-2">
+              <div class="placeholder">
+                <div>
+                  <strong>Story image</strong>
+                  4:3 teaser or editorial crop
+                </div>
+              </div>
+              <div class="placeholder">
+                <div>
+                  <strong>Profile photo</strong>
+                  Contact or team portrait
+                </div>
+              </div>
+            </div>
+            <div class="placeholder">
+              <div>
+                <strong>Logo row</strong>
+                Trust and network placeholder strip
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="archetypes" class="stack-lg">
+        <div class="section-title">
+          <div>
+            <span class="section-kicker">System logic</span>
+            <h2>Page Archetypes</h2>
+          </div>
+          <p class="small-copy">
+            The hosted click dummy groups pages into routing hubs, audience detail
+            pages, listings, and detail templates.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="page-card">
+            <span class="label">Routing hub</span>
+            <h3>Home, Services, Support, About BayPAT</h3>
+            <p class="small-copy">
+              Built around guidance, routing cards, teasers, and directional CTAs.
+            </p>
+          </article>
+          <article class="page-card">
+            <span class="label">Audience detail</span>
+            <h3>Inventors, Universities, Industry, Start-ups</h3>
+            <p class="small-copy">
+              Combines hero copy, content clusters, FAQ support, and conversion blocks.
+            </p>
+          </article>
+          <article class="page-card">
+            <span class="label">Listing / index</span>
+            <h3>Technology offers, News, Team, Career</h3>
+            <p class="small-copy">
+              Header plus a structured list or card overview with optional filters.
+            </p>
+          </article>
+          <article class="page-card">
+            <span class="label">Detail + legal</span>
+            <h3>Offer detail, story detail, news detail, legal pages</h3>
+            <p class="small-copy">
+              Primarily header and long-form content with one next-step action.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="pages" class="stack-lg">
+        <div class="section-title">
+          <div>
+            <span class="section-kicker">Implemented views</span>
+            <h2>Current HTML Outputs</h2>
+          </div>
+        </div>
+
+        <div class="page-grid">
+          <article class="page-card stack-md">
+            <div class="label-row">
+              <span class="label">Prototype entry</span>
+              <span class="label">Real content</span>
+            </div>
+            <h3>Homepage click dummy</h3>
+            <p class="small-copy">
+              Start the fully linked prototype from the BayPAT homepage with working
+              global navigation, footer, and page-to-page routing.
+            </p>
+            <a class="button" href="./pages/home.html">Open homepage</a>
+          </article>
+
+          <article class="page-card stack-md">
+            <div class="label-row">
+              <span class="label">Real content</span>
+              <span class="label">First example</span>
+            </div>
+            <h3>Services for Industry</h3>
+            <p class="small-copy">
+              The first full example page in the final site system, used to validate
+              audience-detail layout, teasers, CTA routing, and FAQ treatment.
+            </p>
+            <a class="button" href="./pages/services-industry.html">Open page</a>
+          </article>
+
+          <article class="page-card stack-md">
+            <div class="label-row">
+              <span class="label">Real pages + scaffolds</span>
+              <span class="label">Prototype map</span>
+            </div>
+            <h3>Sitemap matrix</h3>
+            <p class="small-copy">
+              Maps every page to an archetype, reusable blocks, current content status,
+              and suggested wireframe treatment.
+            </p>
+            <a class="button-secondary" href="./pages/sitemap-matrix.html">Open matrix</a>
+          </article>
+
+          <article class="page-card stack-md">
+            <div class="label-row">
+              <span class="label">Overview</span>
+              <span class="label">Navigation map</span>
+            </div>
+            <h3>Prototype index</h3>
+            <p class="small-copy">
+              Use the library homepage as the starting point to navigate the click
+              dummy and jump into the major prototype sections.
+            </p>
+            <a class="button-secondary" href="./index.html">Open index</a>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

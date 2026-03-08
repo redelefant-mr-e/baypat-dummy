@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erfindungscheck</title>
+    <link rel="stylesheet" href="../styles/global.css?v=prototype-nav-responsive-2" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="artboard desktop">
+        <div class="page-top"><div class="primary-nav"><a class="nav-logo" href="home.html" aria-label="BayPAT home"><div class="placeholder nav-logo-placeholder" aria-hidden="true"></div></a><button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav-erfindungscheck"><span class="nav-toggle-bar" aria-hidden="true"></span></button><div class="nav-links" id="site-nav-erfindungscheck"><div class="nav-item"><a class="nav-link" href="home.html">Home</a></div><div class="nav-item has-dropdown"><a class="nav-link" href="services-overview.html">Services</a><div class="nav-dropdown"><a class="nav-dropdown-link" href="services-inventors.html">For Inventors</a><a class="nav-dropdown-link" href="services-invention-advisors.html">For Invention Advisors</a><a class="nav-dropdown-link" href="services-industry.html">For Industry</a><a class="nav-dropdown-link" href="services-startups.html">For Founders &amp; Start-ups</a></div></div><div class="nav-item has-dropdown"><a class="nav-link" href="technology-offers.html">Technology Offers</a><div class="nav-dropdown"><a class="nav-dropdown-link" href="technology-offers.html">Life Sciences</a><a class="nav-dropdown-link" href="technology-offers.html">Physical Sciences</a><a class="nav-dropdown-link" href="technology-offer-detail.html">Offer Detail</a></div></div><div class="nav-item has-dropdown is-active"><a class="nav-link is-active" href="support.html">Support</a><div class="nav-dropdown"><a class="nav-dropdown-link" href="support-patent-process.html">Patent Process</a><a class="nav-dropdown-link" href="success-stories.html">Success Stories</a><a class="nav-dropdown-link" href="guides-downloads.html">Guides &amp; Downloads</a><a class="nav-dropdown-link" href="baypat-network.html">BayPAT Network</a></div></div><div class="nav-item has-dropdown"><a class="nav-link" href="about.html">About BayPAT</a><div class="nav-dropdown"><a class="nav-dropdown-link" href="news-events.html">News &amp; Events</a><a class="nav-dropdown-link" href="team.html">Team</a><a class="nav-dropdown-link" href="career.html">Career</a></div></div><div class="nav-item"><a class="nav-link" href="contact.html">Contact</a></div></div></div></div>
+        <div class="page-body">
+          <section class="hero-section"><div><span class="content-tag">Support tool</span><h1>Erfindungscheck</h1><p class="small-copy">Prototype placeholder for the interactive Erfindungscheck route.</p><div class="button-row"><a class="button" href="contact.html">Get in touch</a></div></div><div class="placeholder"><div><strong>Content placeholder</strong>Draft content is not yet available for this page.</div></div></section><section class="section-block stack-md"><div class="section-title"><div><span class="content-tag">Awaiting content</span><h2>Planned page structure</h2></div></div><p class="small-copy">The final application or outbound tool is not part of this repo, so the prototype uses a functional placeholder page.</p><div class="card-grid"><article class="mini-card stack-sm"><span class="annotation-chip">Planned block</span><h3>Hero</h3><p class="small-copy">Placeholder content will be replaced once the draft is available.</p></article><article class="mini-card stack-sm"><span class="annotation-chip">Planned block</span><h3>Tool embed placeholder</h3><p class="small-copy">Placeholder content will be replaced once the draft is available.</p></article><article class="mini-card stack-sm"><span class="annotation-chip">Planned block</span><h3>Next steps</h3><p class="small-copy">Placeholder content will be replaced once the draft is available.</p></article><article class="mini-card stack-sm"><span class="annotation-chip">Planned block</span><h3>Contact CTA</h3><p class="small-copy">Placeholder content will be replaced once the draft is available.</p></article></div></section>
+          <footer class="site-footer"><div class="footer-inner"><div class="footer-brand-block stack-sm"><p class="small-copy footer-copy">BayPAT Newsletter</p><p class="small-copy">Dummy signup for updates on technology offers, transfer news, and BayPAT activity.</p><form class="newsletter-form" action="#" method="get"><label class="newsletter-label" for="newsletter-email">Email address</label><div class="newsletter-input-row"><input class="newsletter-input" id="newsletter-email" name="email" type="email" placeholder="name@institution.de" /><button class="button" type="submit">Sign up</button></div><p class="footer-note newsletter-note">Prototype only. No data is stored or sent.</p></form></div><div class="footer-columns"><div class="footer-group"><h3>Services</h3><div class="footer-links"><a href="services-overview.html">Overview</a><a href="services-inventors.html">For Inventors</a><a href="services-invention-advisors.html">For Invention Advisors</a><a href="services-industry.html">For Industry</a><a href="services-startups.html">For Founders & Start-ups</a></div></div><div class="footer-group"><h3>Explore</h3><div class="footer-links"><a href="technology-offers.html">Technology Offers</a><a href="support.html">Support</a><a href="about.html">About BayPAT</a><a href="team.html">Team</a><a href="news-events.html">News & Events</a><a href="contact.html">Contact</a></div></div></div><div class="footer-bottom"><p class="footer-note">Copyright 2026 BayPAT.</p><div class="legal-links"><a href="legal-notes.html">Legal Notes</a><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a></div></div></div></footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      const primaryNav = document.querySelector('.primary-nav');
+      const navToggle = document.querySelector('.nav-toggle');
+      const syncNavState = () => {
+        if (!primaryNav || !navToggle) return;
+        const isDesktop = window.innerWidth > 1080;
+        if (isDesktop) {
+          primaryNav.classList.remove('is-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      };
+      navToggle?.addEventListener('click', () => {
+        const isOpen = primaryNav.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      window.addEventListener('resize', syncNavState);
+      syncNavState();
+      document.querySelectorAll('[data-weekday-only]').forEach((input) => {
+        input.addEventListener('change', () => {
+          if (!input.value) {
+            input.setCustomValidity('');
+            return;
+          }
+          const day = new Date(`${input.value}T12:00:00`).getDay();
+          if (day === 0 || day === 6) {
+            input.setCustomValidity('Please choose a weekday between Monday and Friday.');
+            input.reportValidity();
+          } else {
+            input.setCustomValidity('');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

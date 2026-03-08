@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal Notes</title>
+    <link rel="stylesheet" href="../styles/global.css?v=prototype-nav-responsive-2" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="artboard desktop">
+        <div class="page-top"><div class="primary-nav"><a class="nav-logo" href="home.html" aria-label="BayPAT home"><div class="placeholder nav-logo-placeholder" aria-hidden="true"></div></a><button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav-legal-notes"><span class="nav-toggle-bar" aria-hidden="true"></span></button><div class="nav-links" id="site-nav-legal-notes"><div class="nav-item"><a class="nav-link" href="home.html">Home</a></div><div class="nav-item has-dropdown"><a class="nav-link" href="services-overview.html">Services</a><div class="nav-dropdown"><a class="nav-dropdown-link" href="services-inventors.html">For Inventors</a><a class="nav-dropdown-link" href="services-invention-advisors.html">For Invention Advisors</a><a class="nav-dropdown-link" href="services-industry.html">For Industry</a><a class="nav-dropdown-link" href="services-startups.html">For Founders &amp; Start-ups</a></div></div><div class="nav-item has-dropdown"><a class="nav-link" href="technology-offers.html">Technology Offers</a><div class="nav-dropdown"><a class="nav-dropdown-link" href="technology-offers.html">Life Sciences</a><a class="nav-dropdown-link" href="technology-offers.html">Physical Sciences</a><a class="nav-dropdown-link" href="technology-offer-detail.html">Offer Detail</a></div></div><div class="nav-item has-dropdown"><a class="nav-link" href="support.html">Support</a><div class="nav-dropdown"><a class="nav-dropdown-link" href="support-patent-process.html">Patent Process</a><a class="nav-dropdown-link" href="success-stories.html">Success Stories</a><a class="nav-dropdown-link" href="guides-downloads.html">Guides &amp; Downloads</a><a class="nav-dropdown-link" href="baypat-network.html">BayPAT Network</a></div></div><div class="nav-item has-dropdown"><a class="nav-link" href="about.html">About BayPAT</a><div class="nav-dropdown"><a class="nav-dropdown-link" href="news-events.html">News &amp; Events</a><a class="nav-dropdown-link" href="team.html">Team</a><a class="nav-dropdown-link" href="career.html">Career</a></div></div><div class="nav-item is-active"><a class="nav-link is-active" href="contact.html">Contact</a></div></div></div></div>
+        <div class="page-body">
+          <section class="section-block stack-md article-detail-section"><span class="content-tag">Legal</span><h1>Legal Notes</h1><p class="small-copy">Use this page for legal notice content, company details, and the formal information required for a standard utility page. In the prototype, the structure matters more than the legal accuracy of the placeholder text.</p></section><section class="section-block stack-md article-detail-section"><article class="article-prose stack-md"><h2>Company information</h2><p class="small-copy">Bayerische Patentallianz GmbH<br>Prinzregentenstraße 52<br>80538 Munich<br>Germany</p><p class="small-copy">This placeholder section can later contain the full company details, registration references, authorized representatives, and any additional formal notice content required for the final site.</p><h2>Represented by</h2><p class="small-copy">Use this area for managing director information, commercial register references, VAT or tax identifiers, and the corresponding legal wording once the final text is approved.</p><h2>Disclaimer and responsibility</h2><p class="small-copy">This paragraph can act as a placeholder for standard legal-language sections around responsibility for content, links to third-party pages, and other common notice elements. The final wording should come from the approved legal source.</p></article></section>
+          <footer class="site-footer"><div class="footer-inner"><div class="footer-brand-block stack-sm"><p class="small-copy footer-copy">BayPAT Newsletter</p><p class="small-copy">Dummy signup for updates on technology offers, transfer news, and BayPAT activity.</p><form class="newsletter-form" action="#" method="get"><label class="newsletter-label" for="newsletter-email">Email address</label><div class="newsletter-input-row"><input class="newsletter-input" id="newsletter-email" name="email" type="email" placeholder="name@institution.de" /><button class="button" type="submit">Sign up</button></div><p class="footer-note newsletter-note">Prototype only. No data is stored or sent.</p></form></div><div class="footer-columns"><div class="footer-group"><h3>Services</h3><div class="footer-links"><a href="services-overview.html">Overview</a><a href="services-inventors.html">For Inventors</a><a href="services-invention-advisors.html">For Invention Advisors</a><a href="services-industry.html">For Industry</a><a href="services-startups.html">For Founders & Start-ups</a></div></div><div class="footer-group"><h3>Explore</h3><div class="footer-links"><a href="technology-offers.html">Technology Offers</a><a href="support.html">Support</a><a href="about.html">About BayPAT</a><a href="team.html">Team</a><a href="news-events.html">News & Events</a><a href="contact.html">Contact</a></div></div></div><div class="footer-bottom"><p class="footer-note">Copyright 2026 BayPAT.</p><div class="legal-links"><a href="legal-notes.html">Legal Notes</a><a href="privacy-policy.html">Privacy Policy</a><a href="cookie-policy.html">Cookie Policy</a></div></div></div></footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      const primaryNav = document.querySelector('.primary-nav');
+      const navToggle = document.querySelector('.nav-toggle');
+      const syncNavState = () => {
+        if (!primaryNav || !navToggle) return;
+        const isDesktop = window.innerWidth > 1080;
+        if (isDesktop) {
+          primaryNav.classList.remove('is-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      };
+      navToggle?.addEventListener('click', () => {
+        const isOpen = primaryNav.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      window.addEventListener('resize', syncNavState);
+      syncNavState();
+      document.querySelectorAll('[data-weekday-only]').forEach((input) => {
+        input.addEventListener('change', () => {
+          if (!input.value) {
+            input.setCustomValidity('');
+            return;
+          }
+          const day = new Date(`${input.value}T12:00:00`).getDay();
+          if (day === 0 || day === 6) {
+            input.setCustomValidity('Please choose a weekday between Monday and Friday.');
+            input.reportValidity();
+          } else {
+            input.setCustomValidity('');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
