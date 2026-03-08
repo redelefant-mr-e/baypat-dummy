@@ -2006,6 +2006,20 @@ h3 {
   }
 }
 
+@media (max-width: 920px) {
+  .card-grid,
+  .card-grid.three-up,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
 @media (max-width: 1080px) {
   .primary-nav {
     align-items: center;
